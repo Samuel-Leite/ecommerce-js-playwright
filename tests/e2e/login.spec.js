@@ -1,8 +1,6 @@
 const { test } = require('@playwright/test');
 const LoginPage = require('../pages/loginPage');
 const HomePage = require('../pages/homePage');
-const ProductsPage = require('../pages/productsPage');
-const CartPage = require('../pages/cartPage');
 const apiHelper = require('../../helpers/apiHelper');
 const userData = require('../../fixtures/userData.json');
 const config = require('../../playwright.config');
@@ -18,4 +16,11 @@ test('Validar o login e o logout com sucesso', async ({ page }) => {
   
   await loginPage.doLogin(userData.email,userData.password)
   await homePage.doLogout()
+});
+
+test('Validar o login com credenciais invalidas', async ({ page }) => {
+  const loginPage = new LoginPage(page);  
+  
+  await loginPage.doLogin('horatio@gmail.com','horatio123')
+  await loginPage.validateErrorMessageLogin('Your email or password is incorrect!')
 });

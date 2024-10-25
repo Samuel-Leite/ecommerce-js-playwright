@@ -47,3 +47,24 @@
 2024-10-25T23:04:19.506Z [info]: Navegou para a página do carrinho com sucesso.
 2024-10-25T23:04:22.667Z [info]: A compra do produto foi concluido com sucesso.
 2024-10-25T23:04:23.203Z [info]: Logout realizado com sucesso.
+2024-10-25T23:17:40.700Z [info]: Account deleted successfully: {"responseCode":200,"message":"Account deleted!"}
+2024-10-25T23:17:40.724Z [info]: Account deleted successfully: {"responseCode":404,"message":"Account not found!"}
+2024-10-25T23:17:40.944Z [info]: User created successfully: {"responseCode":400,"message":"Email already exists!"}
+2024-10-25T23:17:40.953Z [info]: User created successfully: {"responseCode":201,"message":"User created!"}
+2024-10-25T23:17:45.359Z [info]: Navegou para a página inicial com sucesso.
+2024-10-25T23:17:45.914Z [info]: Navegou para a página inicial com sucesso.
+2024-10-25T23:17:46.683Z [info]: Login realizado com sucesso.
+2024-10-25T23:17:47.207Z [info]: Login realizado com sucesso.
+2024-10-25T23:17:47.376Z [info]: Logout realizado com sucesso.
+2024-10-25T23:17:47.827Z [info]: Navegou para a página de produtos com sucesso.
+2024-10-25T23:17:48.030Z [info]: Categoria de roupas masculinas selecionada com sucesso.
+2024-10-25T23:17:48.822Z [info]: Categoria de camisetas masculinas selecionada com sucesso.
+2024-10-25T23:17:48.963Z [info]: Produto de camiseta masculina selecionado com sucesso.
+2024-10-25T23:17:49.396Z [info]: Continuar comprando clicado com sucesso.
+2024-10-25T23:17:49.490Z [info]: Categoria de roupas masculinas selecionada com sucesso.
+2024-10-25T23:17:49.874Z [info]: Categoria de jeans masculinos selecionada com sucesso.
+2024-10-25T23:17:49.994Z [info]: Produto de jeans masculinos selecionado com sucesso.
+2024-10-25T23:17:50.443Z [info]: Continuar comprando clicado com sucesso.
+2024-10-25T23:17:50.784Z [info]: Navegou para a página do carrinho com sucesso.
+2024-10-25T23:17:53.519Z [info]: A compra do produto foi concluido com sucesso.
+2024-10-25T23:17:54.084Z [info]: Logout realizado com sucesso.

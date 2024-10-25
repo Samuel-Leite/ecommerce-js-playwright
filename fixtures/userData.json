@@ -1,0 +1,19 @@
+{
+    "name": "Scrooge McDuck",
+    "email": "scrooge.mcduck@duckburg.com",
+    "password": "swimInGold$123",
+    "title": "Mr",
+    "birth_date": "01",
+    "birth_month": "July",
+    "birth_year": "1867",
+    "firstname": "Scrooge",
+    "lastname": "McDuck",
+    "company": "McDuck Enterprises",
+    "address1": "1 Money Bin Plaza",
+    "address2": "Suite 1",
+    "country": "Duckburg",
+    "zipcode": "00001",
+    "state": "Calisota",
+    "city": "Duckburg",
+    "mobile_number": "+1-800-555-1867"
+}

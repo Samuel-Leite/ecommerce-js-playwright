@@ -10,7 +10,7 @@ class Logger {
           return `${timestamp} [${level}]: ${message}`
         })
       ),
-      transports: [new transports.Console(), new transports.File({ filename: 'app.log' })]
+      transports: [new transports.Console(), new transports.File({ filename: 'winston.log' })]
     })
   }
 

@@ -1,7 +1,7 @@
 const axios = require('axios')
 const logger = require('./logger')
 
-class apiHelper {
+class userApi {
   constructor(baseURL) {
     this.api = axios.create({
       baseURL: baseURL,
@@ -62,4 +62,4 @@ class apiHelper {
   }
 }
 
-module.exports = apiHelper
+module.exports = userApi

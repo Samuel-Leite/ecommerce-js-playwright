@@ -1,4 +1,4 @@
-const { createLogger, format, transports } = require('winston');
+const { createLogger, format, transports } = require('winston')
 
 class Logger {
   constructor() {
@@ -7,23 +7,20 @@ class Logger {
       format: format.combine(
         format.timestamp(),
         format.printf(({ timestamp, level, message }) => {
-          return `${timestamp} [${level}]: ${message}`;
+          return `${timestamp} [${level}]: ${message}`
         })
       ),
-      transports: [
-        new transports.Console(),
-        new transports.File({ filename: 'app.log' })
-      ],
-    });
+      transports: [new transports.Console(), new transports.File({ filename: 'app.log' })]
+    })
   }
 
   info(message) {
-    this.logger.info(message);
+    this.logger.info(message)
   }
 
   error(message) {
-    this.logger.error(message);
+    this.logger.error(message)
   }
 }
 
-module.exports = new Logger();
+module.exports = new Logger()

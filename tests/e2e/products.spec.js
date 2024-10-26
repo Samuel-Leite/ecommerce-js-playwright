@@ -9,18 +9,20 @@ const config = require('../../playwright.config')
 const logger = require('../../helpers/logger')
 const userService = new userApi(config.use.baseURL)
 
-test.beforeEach(async () => { 
-  logger.clearLogFile();
+test.beforeEach(async () => {
+  logger.info('-----------------------------------------------------------------------');
+  logger.info('--------------------------------Start----------------------------------');
+  logger.clearLogFile();  
   await userService.deleteUser(userData.email, userData.password)
   await userService.createUser(userData)
-  logger.info('--------------------------------Start----------------------------------');
 });
 
 test.afterEach(async () => {
   logger.info('--------------------------------End----------------------------------');
+  logger.info('-----------------------------------------------------------------------');
 });
 
-test('Validar compra de roupas logado na plataforma com sucesso', async ({ page }) => {
+test('@smoke Validar compra de roupas logado na plataforma com sucesso', async ({ page }) => {
   const loginPage = new LoginPage(page)
   const homePage = new HomePage(page)
   const productsPage = new ProductsPage(page)

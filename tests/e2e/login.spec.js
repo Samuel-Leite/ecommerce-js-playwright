@@ -8,16 +8,16 @@ const logger = require('../../helpers/logger')
 const userService = new userApi(config.use.baseURL)
 
 test.beforeEach(async () => {
-  logger.clearLogFile();
-
+  logger.info('-----------------------------------------------------------------------');
   logger.info('--------------------------------Start----------------------------------');
-  
+  logger.clearLogFile();  
   await userService.deleteUser(userData.email, userData.password)
   await userService.createUser(userData)
 });
 
 test.afterEach(async () => {
   logger.info('--------------------------------End----------------------------------');
+  logger.info('-----------------------------------------------------------------------');
 });
 
 test('Validar o login e o logout com sucesso', async ({ page }) => {

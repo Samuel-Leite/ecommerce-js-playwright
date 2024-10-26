@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "regression": "npx playwright test --workers=1 --headed",
+    "tag": "npx playwright test --workers=1 --headed -g",
+    "ui": "npx playwright test --ui",
     "prepare": "husky install",
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js"

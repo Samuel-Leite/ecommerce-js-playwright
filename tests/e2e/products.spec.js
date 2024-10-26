@@ -17,7 +17,22 @@ test('@smoke Validar compra de roupas logado na plataforma com sucesso', async (
   await productsPage.selectMenTShirts()
   await productsPage.selectMenJeans()
   await homePage.goToCard()
-  await cartPage.doPayment()
+  await cartPage.doPaymentLogin()
 
   await homePage.doLogout()
 })
+
+test('@smoke Validar compra de roupas sem logar na plataforma com sucesso', async ({ page }) => {
+  const loginPage = new LoginPage(page)
+  const homePage = new HomePage(page)
+  const productsPage = new ProductsPage(page)
+  const cartPage = new CartPage(page)
+
+  await loginPage.goto()
+  await homePage.goToProducts()
+  await productsPage.selectMenTShirts()
+  await productsPage.selectMenJeans()
+  await homePage.goToCard()
+  await cartPage.doPaymentNoLogin(userData.email, userData.password)
+})
+

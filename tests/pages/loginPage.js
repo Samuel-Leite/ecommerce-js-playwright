@@ -35,6 +35,18 @@ class LoginPage {
     }
   }
 
+  async doLoginAfterChoosenProduct(email, password) {
+    try {
+      await this.page.fill(this.txtEmail, email)
+      await this.page.fill(this.txtPassword, password)
+      await this.page.click(this.btnLogin)
+
+      logger.info('As credenciais do login foram preenchidas com sucesso.')
+    } catch (error) {
+      logger.error('Erro ao preencher as credenciais do login:', error.message)
+    }
+  }
+
   async validateErrorMessageLogin(text) {
     try {
       await this.page.waitForSelector('form p', { state: 'visible' })

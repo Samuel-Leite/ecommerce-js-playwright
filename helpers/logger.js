@@ -18,9 +18,9 @@ class Logger {
   clearLogFile() {
     try {
       fs.writeFileSync('winston.log', '', 'utf8')
-      this.logger.info('Arquivo de log limpo com sucesso.') // Log da ação de limpar o arquivo
+      this.logger.info('Arquivo de log limpo com sucesso.')
     } catch (error) {
-      this.logger.error(`Falha ao limpar o arquivo de log: ${error.message}`) // Registra erro se a operação falhar
+      this.logger.error(`Falha ao limpar o arquivo de log: ${error.message}`)
     }
   }
 

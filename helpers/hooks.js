@@ -12,6 +12,7 @@ async function cleanAllureResults() {
   const allureResultsDir = path.join(__dirname, '..', 'allure-results')
   try {
     await fs.rm(allureResultsDir, { recursive: true, force: true })
+    logger.info('-----------------------------------------------------------------------')
     logger.info('Diretório allure-results limpo com sucesso!')
   } catch (err) {
     logger.error(`Erro ao remover o diretório allure-results: ${err.message}`)

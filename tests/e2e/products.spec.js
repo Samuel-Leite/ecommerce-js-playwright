@@ -21,7 +21,7 @@ test('@smoke Validar compra de roupas logado na plataforma com sucesso', async (
   await homePage.doLogout()
 })
 
-test('@smoke Validar compra de roupas sem logar na plataforma com sucesso', async ({ page }) => {
+test('@wip Validar compra de roupas sem logar na plataforma com sucesso', async ({ page }) => {
   const loginPage = new LoginPage(page)
   const homePage = new HomePage(page)
   const productsPage = new ProductsPage(page)

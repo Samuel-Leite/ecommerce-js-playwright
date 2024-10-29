@@ -18,7 +18,6 @@ test('@smoke Validar compra de roupas logado na plataforma com sucesso', async (
   await productsPage.selectMenJeans()
   await homePage.goToCard()
   await cartPage.doPaymentLogin()
-
   await homePage.doLogout()
 })
 
@@ -34,5 +33,5 @@ test('@smoke Validar compra de roupas sem logar na plataforma com sucesso', asyn
   await productsPage.selectMenJeans()
   await homePage.goToCard()
   await cartPage.doPaymentNoLogin(userData.email, userData.password)
+  await homePage.doLogout()
 })
-
